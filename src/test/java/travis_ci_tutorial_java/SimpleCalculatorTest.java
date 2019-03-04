@@ -28,8 +28,15 @@ public class SimpleCalculatorTest {
 	
 	@Test
 	public void testDivide() {
-		SimpleCalculator calc = new SimpleCalculator();
-		double answer = calc.divide(20, 5);
-		assertEquals(answer, 4, 0.00);
+		SimpleCalculator calc = new SimpleCalculator();			
+		double answer = calc.divide(20, 4);
+		assertEquals(answer, 5, 0.00);
+	}
+	
+	@Test (expected = IllegalArgumentException.class)
+	public void testDivide_by0() {
+		SimpleCalculator calc = new SimpleCalculator();			
+		double answer = calc.divide(20, 0);
+		//assertEquals(answer, 5, 0.00);
 	}
 }
