@@ -18,4 +18,11 @@ public class SimpleCalculatorTest {
 		int answer = calc.minus(5, 3);
 		assertEquals(answer, 2);
 	}
+	
+	@Test
+	public void testMultiply() {
+		SimpleCalculator calc = new SimpleCalculator();
+		int answer = calc.multiply(5, 3);
+		assertEquals(answer, 15);
+	}
 }
