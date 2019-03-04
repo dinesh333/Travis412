@@ -25,4 +25,11 @@ public class SimpleCalculatorTest {
 		int answer = calc.multiply(5, 3);
 		assertEquals(answer, 15);
 	}
+	
+	@Test
+	public void testDivide() {
+		SimpleCalculator calc = new SimpleCalculator();
+		double answer = calc.divide(20, 5);
+		assertEquals(answer, 4, 0.00);
+	}
 }
