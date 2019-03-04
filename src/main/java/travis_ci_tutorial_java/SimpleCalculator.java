@@ -13,7 +13,11 @@ public class SimpleCalculator {
 		return a * b;
 	}
 	
-	public double divide(int a, int b) {
+	public double divide(int a, int b){
+		if(b == 0)
+		{
+			throw new IllegalArgumentException("Divide by 0 error");
+		}
 		double answer = a/b;
 		return answer;
 	}
